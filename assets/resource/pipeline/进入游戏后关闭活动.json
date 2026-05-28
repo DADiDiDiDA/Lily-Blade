@@ -1,0 +1,184 @@
+{
+    "$__mpe_config_进入游戏后关闭活动": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": 141,
+                "y": 357,
+                "zoom": 0.33
+            },
+            "filename": "进入游戏后关闭活动",
+            "version": "v1.5.3"
+        }
+    },
+    "领取签到奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1169,
+                    583,
+                    107,
+                    113
+                ],
+                "template": [
+                    "签到奖励领取按键.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "签到奖励已领取-开始关闭签到界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1994,
+                "y": 266
+            }
+        }
+    },
+    "签到奖励已领取-开始关闭签到界面": {
+        "next": [
+            "开始关闭签到界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2304,
+                "y": 246
+            }
+        }
+    },
+    "开始关闭签到界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1127,
+                    12,
+                    123,
+                    89
+                ],
+                "template": [
+                    "签到关闭按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始关闭活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2581,
+                "y": 86
+            }
+        }
+    },
+    "已在主界面-任务完成": {
+        "$__mpe_code": {
+            "position": {
+                "x": 977,
+                "y": -481
+            }
+        }
+    },
+    "开始关闭签到界面第一次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1127,
+                    12,
+                    123,
+                    89
+                ],
+                "template": [
+                    "签到关闭按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭签到界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1139,
+                "y": 239
+            }
+        }
+    },
+    "签到界面开始": {
+        "next": [
+            "开始关闭签到界面第一次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 707,
+                "y": 239
+            }
+        }
+    },
+    "开始关闭活动": {
+        "next": [
+            "检测是否在主界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 72,
+                "y": -189
+            }
+        }
+    },
+    "检测是否在主界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1025,
+                    567,
+                    239,
+                    136
+                ],
+                "template": [
+                    "出航图标.png"
+                ]
+            }
+        },
+        "timeout": 4000,
+        "next": [
+            "已在主界面-任务完成"
+        ],
+        "on_error": [
+            "签到界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 417,
+                "y": -318
+            }
+        }
+    },
+    "关闭签到界面": {
+        "next": [
+            "领取签到奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1504,
+                "y": 359
+            }
+        }
+    }
+}

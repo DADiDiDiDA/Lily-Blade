@@ -1,0 +1,63 @@
+{
+    "$__mpe_config_进入游戏": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -674,
+                "y": 214,
+                "zoom": 1.06
+            },
+            "filename": "进入游戏",
+            "version": "v1.5.3"
+        }
+    },
+    "开始进入游戏": {
+        "next": [
+            "点击进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 737,
+                "y": 5
+            }
+        }
+    },
+    "点击进入游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    829,
+                    516,
+                    173,
+                    61
+                ],
+                "expected": [
+                    "进入"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入游戏结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 997,
+                "y": 5
+            }
+        }
+    },
+    "进入游戏结束": {
+        "post_delay": 30000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1257,
+                "y": 5
+            }
+        }
+    }
+}
