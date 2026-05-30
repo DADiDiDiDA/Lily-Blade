@@ -3,23 +3,103 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780150935886,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\进入游戏.json",
             "savedViewport": {
-                "x": -674,
-                "y": 214,
-                "zoom": 1.06
+                "x": -782,
+                "y": 161,
+                "zoom": 0.75
             },
             "filename": "进入游戏",
             "version": "v1.5.3"
         }
     },
-    "开始进入游戏": {
+    "关闭公告栏-进入游戏": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    4,
+                    111
+                ]
+            }
+        },
         "next": [
             "点击进入游戏"
         ],
+        "on_error": [
+            "检测是不是有更新"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 737,
-                "y": 5
+                "x": 1367,
+                "y": -130
+            }
+        }
+    },
+    "启动铃兰之剑": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.xd.ssrpg"
+            }
+        },
+        "next": [
+            "等待游戏加载-进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 481,
+                "y": -151
+            }
+        }
+    },
+    "开始进入游戏": {
+        "next": [
+            "启动铃兰之剑"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 162,
+                "y": -40
+            }
+        }
+    },
+    "检测公告栏-进入游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    499,
+                    68,
+                    290,
+                    53
+                ],
+                "expected": [
+                    "公告"
+                ]
+            }
+        },
+        "timeout": -1,
+        "next": [
+            "关闭公告栏-进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1074,
+                "y": -203
+            }
+        }
+    },
+    "检测是不是有更新": {
+        "next": [
+            "确认更新"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1596,
+                "y": 240
             }
         }
     },
@@ -41,13 +121,53 @@
         "action": {
             "type": "Click"
         },
+        "timeout": 40000,
         "next": [
             "进入游戏结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 997,
-                "y": 5
+                "x": 1840,
+                "y": -26
+            }
+        }
+    },
+    "确认更新": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    271,
+                    453,
+                    749,
+                    86
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1917,
+                "y": 224
+            }
+        }
+    },
+    "等待游戏加载-进入游戏": {
+        "next": [
+            "检测公告栏-进入游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 798,
+                "y": -156
             }
         }
     },
@@ -55,8 +175,8 @@
         "post_delay": 30000,
         "$__mpe_code": {
             "position": {
-                "x": 1257,
-                "y": 5
+                "x": 2348,
+                "y": 10
             }
         }
     }

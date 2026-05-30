@@ -1,0 +1,93 @@
+{
+    "$__mpe_config_领取邮件奖励": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780151179534,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\领取邮件奖励.json",
+            "savedViewport": {
+                "x": -1936,
+                "y": 312,
+                "zoom": 0.75
+            },
+            "filename": "领取邮件奖励",
+            "version": "v1.5.3"
+        }
+    },
+    "开始全部领取-邮件": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    143,
+                    631,
+                    146,
+                    32
+                ],
+                "expected": [
+                    "全部"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3356,
+                "y": -62
+            }
+        }
+    },
+    "点击邮件": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    127,
+                    72,
+                    369,
+                    91
+                ],
+                "template": [
+                    "邮件图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始全部领取-邮件"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2980,
+                "y": -53
+            }
+        }
+    },
+    "领取邮件奖励开始": {
+        "next": [
+            "点击邮件"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2720,
+                "y": -53
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_领取邮件奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3668,
+                "y": -21
+            }
+        }
+    }
+}

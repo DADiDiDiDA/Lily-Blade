@@ -1,0 +1,947 @@
+{
+    "$__mpe_config_开始刷本": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -1124,
+                "y": -55,
+                "zoom": 0.4
+            },
+            "filename": "开始刷本",
+            "version": "v1.5.3"
+        }
+    },
+    "开始刷本启动": {
+        "next": [
+            "进入刷本界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2579,
+                "y": 150
+            }
+        }
+    },
+    "进入刷本界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1000,
+                    573,
+                    269,
+                    125
+                ],
+                "template": [
+                    "出航图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始选择交错的世界"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3013,
+                "y": 146
+            }
+        }
+    },
+    "开始选择交错的世界": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    135,
+                    473,
+                    997,
+                    168
+                ],
+                "expected": [
+                    "世界"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始选择要刷哪个关卡呢"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3368,
+                "y": 129
+            }
+        }
+    },
+    "开始选择要刷哪个关卡呢": {
+        "next": [
+            "刷实战训练开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3661,
+                "y": 137
+            }
+        }
+    },
+    "刷实战训练开始": {
+        "next": [
+            "寻找实战训练关卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4192,
+                "y": 18
+            }
+        }
+    },
+    "刷星辰试炼开始": {
+        "next": [
+            "寻找星辰试炼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4005,
+                "y": 312
+            }
+        }
+    },
+    "刷光辉锻铸开始": {
+        "timeout": 4000,
+        "next": [
+            "寻找光辉锻铸-第一次"
+        ],
+        "on_error": [
+            "没找到-往右翻页"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4063,
+                "y": 696
+            }
+        }
+    },
+    "刷记忆寻回开始": {
+        "next": [
+            "寻找记忆寻回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3924,
+                "y": 1306
+            }
+        }
+    },
+    "刷进阶试炼开始": {
+        "next": [
+            "寻找进阶试炼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4180,
+                "y": 959
+            }
+        }
+    },
+    "寻找实战训练关卡": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    13,
+                    492,
+                    1267,
+                    172
+                ],
+                "expected": [
+                    "实战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭当前关卡界面-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4549,
+                "y": -23
+            }
+        }
+    },
+    "寻找当前关卡是不是三星通关关卡-实战训练": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    555,
+                    274,
+                    163,
+                    126
+                ],
+                "template": [
+                    "关卡三星通关标志.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始选择代行任务-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5715,
+                "y": -302
+            }
+        }
+    },
+    "开始选择代行任务-实战训练": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    850,
+                    594,
+                    406,
+                    76
+                ],
+                "expected": [
+                    "代行"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有没有提示罐头界面呢-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6071,
+                "y": -436
+            }
+        }
+    },
+    "有没有提示罐头界面呢-实战训练": {
+        "next": [
+            "有提示罐头-继续代行"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6401,
+                "y": -554
+            }
+        }
+    },
+    "关闭当前关卡界面-实战训练": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    101,
+                    6,
+                    373,
+                    68
+                ],
+                "template": [
+                    "关卡内选择菜单.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    5,
+                    86,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "开始寻找有没有三星通关"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5091,
+                "y": -34
+            }
+        }
+    },
+    "有提示罐头-继续代行": {
+        "next": [
+            "选择代行界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6747,
+                "y": -638
+            }
+        }
+    },
+    "选择代行界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    415,
+                    238,
+                    544,
+                    264
+                ],
+                "expected": [
+                    "代行"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始代行角色选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7124,
+                "y": -783
+            }
+        }
+    },
+    "开始代行角色选择": {
+        "next": [
+            "确认代行开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7465,
+                "y": -387
+            }
+        }
+    },
+    "确认代行开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    936,
+                    625,
+                    138,
+                    63
+                ],
+                "expected": [
+                    "确认"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "timeout": 4000,
+        "next": [
+            "领取签到奖励_副本8"
+        ],
+        "on_error": [
+            "无可用代行角色退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7845,
+                "y": -457
+            }
+        }
+    },
+    "寻找进阶试炼": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    502,
+                    1264,
+                    139
+                ],
+                "expected": [
+                    "进阶"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择有高额奖励的关卡-进阶试炼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4504,
+                "y": 947
+            }
+        }
+    },
+    "选择有高额奖励的关卡-进阶试炼": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    23,
+                    105,
+                    1215,
+                    116
+                ],
+                "template": [
+                    "高额奖励图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    88,
+                    54,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "关闭当前关卡界面-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4874,
+                "y": 875
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_开始刷本": {
+        "$__mpe_code": {
+            "position": {
+                "x": 8846,
+                "y": 617
+            }
+        }
+    },
+    "开始寻找有没有三星通关": {
+        "next": [
+            "寻找当前关卡是不是三星通关关卡-实战训练"
+        ],
+        "on_error": [
+            "开始查看上一关是不是三星通关"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5351,
+                "y": -34
+            }
+        }
+    },
+    "查看上一关是不是三星通关": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    361,
+                    282,
+                    141,
+                    126
+                ],
+                "template": [
+                    "关卡三星通关标志.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始选择代行任务-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6248,
+                "y": -59
+            }
+        }
+    },
+    "查看上上关是不是三星通关": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    117,
+                    269,
+                    186,
+                    129
+                ],
+                "template": [
+                    "关卡三星通关标志.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始选择代行任务-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6385,
+                "y": 240
+            }
+        }
+    },
+    "开始查看上一关是不是三星通关": {
+        "next": [
+            "查看上一关是不是三星通关"
+        ],
+        "on_error": [
+            "开始查看上上关是不是三星通关"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5814,
+                "y": 90
+            }
+        }
+    },
+    "开始查看上上关是不是三星通关": {
+        "next": [
+            "查看上上关是不是三星通关"
+        ],
+        "on_error": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5942,
+                "y": 414
+            }
+        }
+    },
+    "寻找星辰试炼": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    7,
+                    482,
+                    1272,
+                    170
+                ],
+                "expected": [
+                    "星辰"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择有高额奖励的关卡-星辰试炼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4290,
+                "y": 291
+            }
+        }
+    },
+    "选择有高额奖励的关卡-星辰试炼": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    23,
+                    105,
+                    1215,
+                    116
+                ],
+                "template": [
+                    "高额奖励图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    88,
+                    54,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "关闭当前关卡界面-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4573,
+                "y": 208
+            }
+        }
+    },
+    "寻找光辉锻铸-第一次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    502,
+                    1264,
+                    139
+                ],
+                "expected": [
+                    "光辉"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭当前关卡界面-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4422,
+                "y": 518
+            }
+        }
+    },
+    "没找到-往右翻页": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1088,
+                    651,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        733,
+                        667,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "post_delay": 4000,
+        "next": [
+            "寻找光辉锻铸_第二次"
+        ],
+        "on_error": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4738,
+                "y": 634
+            }
+        }
+    },
+    "寻找光辉锻铸_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    502,
+                    1264,
+                    139
+                ],
+                "expected": [
+                    "光辉"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭当前关卡界面-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5237,
+                "y": 554
+            }
+        }
+    },
+    "寻找记忆寻回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    495,
+                    1218,
+                    168
+                ],
+                "expected": [
+                    "记忆"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始检测剩余挑战次数-记忆寻回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4234,
+                "y": 1315
+            }
+        }
+    },
+    "开始挑战记忆寻回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    881,
+                    593,
+                    359,
+                    71
+                ],
+                "expected": [
+                    "出击"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 7000,
+        "next": [
+            "开始战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4833,
+                "y": 1281
+            }
+        }
+    },
+    "开始战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1131,
+                    563,
+                    125,
+                    42
+                ],
+                "expected": [
+                    "开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始调整战斗方式"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5142,
+                "y": 1265
+            }
+        }
+    },
+    "看看是不是自动战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    78,
+                    12,
+                    375,
+                    70
+                ],
+                "expected": [
+                    "手动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始检测战斗结果-记忆寻回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5763,
+                "y": 1263
+            }
+        }
+    },
+    "开始调整战斗方式": {
+        "next": [
+            "看看是不是自动战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5429,
+                "y": 1347
+            }
+        }
+    },
+    "开始检测战斗结果-记忆寻回": {
+        "timeout": -1,
+        "next": [
+            "检测战斗结果-记忆寻回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6061,
+                "y": 1188
+            }
+        }
+    },
+    "检测战斗结果-记忆寻回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    766,
+                    23,
+                    290,
+                    99
+                ],
+                "expected": [
+                    "胜利"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6371,
+                "y": 1130
+            }
+        }
+    },
+    "开始检测剩余挑战次数-记忆寻回": {
+        "timeout": 4000,
+        "next": [
+            "检测剩余挑战次数"
+        ],
+        "on_error": [
+            "开始挑战记忆寻回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4515,
+                "y": 1312
+            }
+        }
+    },
+    "检测剩余挑战次数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    944,
+                    10,
+                    142,
+                    55
+                ],
+                "expected": [
+                    "0"
+                ]
+            }
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4722,
+                "y": 1573
+            }
+        }
+    },
+    "领取签到奖励_副本8": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1023,
+                    528,
+                    252,
+                    186
+                ],
+                "template": [
+                    "签到奖励领取按键.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "关闭当前关卡界面-实战训练"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8280,
+                "y": -407
+            }
+        }
+    },
+    "无可用代行角色退出": {
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8032,
+                "y": -7
+            }
+        }
+    }
+}

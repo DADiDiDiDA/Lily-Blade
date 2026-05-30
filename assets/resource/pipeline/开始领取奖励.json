@@ -1,0 +1,146 @@
+{
+    "$__mpe_config_开始领取奖励": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -4884,
+                "y": -191,
+                "zoom": 0.75
+            },
+            "filename": "开始领取奖励",
+            "version": "v1.5.3"
+        }
+    },
+    "$__mpe_external_返回主界面开始_开始领取奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 8086,
+                "y": 543
+            }
+        }
+    },
+    "开始领取奖励": {
+        "next": [
+            "寻找菜单界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6786,
+                "y": 543
+            }
+        }
+    },
+    "寻找菜单界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    4,
+                    479,
+                    94
+                ],
+                "template": [
+                    "关卡内选择菜单.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择每日任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7046,
+                "y": 543
+            }
+        }
+    },
+    "选择每日任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    813,
+                    151,
+                    392,
+                    430
+                ],
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择每日奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7306,
+                "y": 543
+            }
+        }
+    },
+    "选择每日奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    36,
+                    81,
+                    196,
+                    251
+                ],
+                "expected": [
+                    "每日"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取每日任务奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7566,
+                "y": 543
+            }
+        }
+    },
+    "领取每日任务奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    939,
+                    7,
+                    296,
+                    66
+                ],
+                "expected": [
+                    "全部"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7826,
+                "y": 543
+            }
+        }
+    }
+}
