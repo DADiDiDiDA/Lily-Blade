@@ -1,0 +1,298 @@
+{
+    "$__mpe_config_丰饶之角奖励领取": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780191704107,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\丰饶之角奖励领取.json",
+            "savedViewport": {
+                "x": -1278,
+                "y": -367,
+                "zoom": 0.75
+            },
+            "filename": "丰饶之角奖励领取",
+            "version": "v1.5.3"
+        }
+    },
+    "$__mpe_external_返回主界面开始_丰饶之角奖励领取": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4189,
+                "y": 1259
+            }
+        }
+    },
+    "尝试任务领取-丰饶之角": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    709,
+                    154,
+                    447,
+                    44
+                ],
+                "template": [
+                    "待领取奖励图标.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.45
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -29,
+                    5,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "开始全部领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3383,
+                "y": 469
+            }
+        }
+    },
+    "尝试奖励领取-丰饶之角": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    465,
+                    152,
+                    207,
+                    49
+                ],
+                "template": [
+                    "待领取奖励图标.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.45
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -29,
+                    5,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "开始全部领取奖励-丰饶之角"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3789,
+                "y": 811
+            }
+        }
+    },
+    "开始丰饶之角奖励领取": {
+        "next": [
+            "进入丰饶之角界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2430,
+                "y": 671
+            }
+        }
+    },
+    "开始全部领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1046,
+                    618,
+                    165,
+                    60
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始确认领取奖励-丰饶"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3653,
+                "y": 510
+            }
+        }
+    },
+    "开始全部领取奖励-丰饶之角": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1046,
+                    618,
+                    165,
+                    60
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4161,
+                "y": 854
+            }
+        }
+    },
+    "开始尝试任务奖励领取-丰饶之角": {
+        "timeout": 8000,
+        "next": [
+            "尝试任务领取-丰饶之角"
+        ],
+        "on_error": [
+            "开始尝试奖励领取-丰饶之角"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3070,
+                "y": 522
+            }
+        }
+    },
+    "开始尝试奖励领取-丰饶之角": {
+        "timeout": 7000,
+        "next": [
+            "尝试奖励领取-丰饶之角"
+        ],
+        "on_error": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3413,
+                "y": 902
+            }
+        }
+    },
+    "开始确认领取奖励-丰饶": {
+        "timeout": 7000,
+        "next": [
+            "领取签到奖励-丰饶"
+        ],
+        "on_error": [
+            "开始尝试任务奖励领取-丰饶之角"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3955,
+                "y": 414
+            }
+        }
+    },
+    "结束领取签到奖励-丰饶": {
+        "next": [
+            "开始确认领取奖励-丰饶"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4529,
+                "y": 375
+            }
+        }
+    },
+    "进入丰饶之角界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    23,
+                    148,
+                    95,
+                    387
+                ],
+                "expected": [
+                    "丰饶"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    -28,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "next": [
+            "开始尝试任务奖励领取-丰饶之角"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2836,
+                "y": 687
+            }
+        }
+    },
+    "领取签到奖励-丰饶": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1023,
+                    528,
+                    252,
+                    186
+                ],
+                "template": [
+                    "签到奖励领取按键.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "结束领取签到奖励-丰饶"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4232,
+                "y": 182
+            }
+        }
+    }
+}

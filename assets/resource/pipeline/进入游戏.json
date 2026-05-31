@@ -3,13 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780150935886,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\进入游戏.json",
             "savedViewport": {
-                "x": -782,
-                "y": 161,
-                "zoom": 0.75
+                "x": -476,
+                "y": 121,
+                "zoom": 0.76
             },
             "filename": "进入游戏",
             "version": "v1.5.3"
@@ -25,6 +22,7 @@
                 ]
             }
         },
+        "timeout": 35000,
         "next": [
             "点击进入游戏"
         ],
@@ -33,8 +31,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1367,
-                "y": -130
+                "x": 1405,
+                "y": -256
             }
         }
     },
@@ -45,6 +43,7 @@
                 "package": "com.xd.ssrpg"
             }
         },
+        "post_delay": 3500,
         "next": [
             "等待游戏加载-进入游戏"
         ],
@@ -81,14 +80,13 @@
                 ]
             }
         },
-        "timeout": -1,
         "next": [
             "关闭公告栏-进入游戏"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1074,
-                "y": -203
+                "x": 1079,
+                "y": -329
             }
         }
     },
@@ -121,7 +119,6 @@
         "action": {
             "type": "Click"
         },
-        "timeout": 40000,
         "next": [
             "进入游戏结束"
         ],
@@ -163,6 +160,9 @@
     "等待游戏加载-进入游戏": {
         "next": [
             "检测公告栏-进入游戏"
+        ],
+        "on_error": [
+            "点击进入游戏"
         ],
         "$__mpe_code": {
             "position": {
