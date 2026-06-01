@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3759,
-                "y": 122,
-                "zoom": 0.87
+                "x": -4549,
+                "y": 414,
+                "zoom": 0.69
             },
             "filename": "开始刷本",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "$__mpe_external_返回主界面开始_开始刷本": {
@@ -47,6 +47,7 @@
                 ]
             }
         },
+        "post_delay": 3000,
         "next": [
             "开始寻找有没有三星通关"
         ],
@@ -446,6 +447,7 @@
         }
     },
     "开始检测剩余挑战次数-记忆寻回": {
+        "post_delay": 3000,
         "timeout": 4000,
         "next": [
             "检测剩余挑战次数"
@@ -501,6 +503,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
             "开始选择要刷哪个关卡呢"
         ],
@@ -529,6 +532,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3000,
         "next": [
             "有没有提示罐头界面呢-实战训练"
         ],

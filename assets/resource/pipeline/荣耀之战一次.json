@@ -3,10 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780216366492,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\荣耀之战一次.json",
             "savedViewport": {
-                "x": -1989,
-                "y": -187,
-                "zoom": 0.5
+                "x": -3304,
+                "y": -620,
+                "zoom": 0.99
             },
             "filename": "荣耀之战一次",
             "version": "v1.5.3"
@@ -101,6 +104,21 @@
             }
         }
     },
+    "开始自动战斗检查-荣耀之战": {
+        "timeout": 5000,
+        "next": [
+            "自动战斗检查-荣耀之战"
+        ],
+        "on_error": [
+            "开始检测战斗是否结束-荣耀之战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5003,
+                "y": 711
+            }
+        }
+    },
     "开始进入主菜单-荣耀之战": {
         "recognition": {
             "type": "TemplateMatch",
@@ -155,6 +173,34 @@
             }
         }
     },
+    "自动战斗检查-荣耀之战": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    5,
+                    343,
+                    70
+                ],
+                "expected": [
+                    "手动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始检测战斗是否结束-荣耀之战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5283,
+                "y": 531
+            }
+        }
+    },
     "荣耀之战一次开始": {
         "post_delay": 3000,
         "next": [
@@ -193,7 +239,7 @@
                 ]
             }
         },
-        "post_delay": 4000,
+        "post_delay": 15000,
         "timeout": 4000,
         "next": [
             "选择第一个战斗-荣耀之战"
@@ -234,49 +280,6 @@
             "position": {
                 "x": 4168,
                 "y": 653
-            }
-        }
-    },
-    "自动战斗检查-荣耀之战": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    0,
-                    5,
-                    343,
-                    70
-                ],
-                "expected": [
-                    "手动"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "开始检测战斗是否结束-荣耀之战"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5283,
-                "y": 531
-            }
-        }
-    },
-    "开始自动战斗检查-荣耀之战": {
-        "timeout": 5000,
-        "next": [
-            "自动战斗检查-荣耀之战"
-        ],
-        "on_error": [
-            "开始检测战斗是否结束-荣耀之战"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5003,
-                "y": 711
             }
         }
     }
