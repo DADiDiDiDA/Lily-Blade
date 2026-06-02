@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -277,
-                "y": 251,
-                "zoom": 0.79
+                "x": -40,
+                "y": 386,
+                "zoom": 0.76
             },
             "filename": "进入游戏",
             "version": "v1.6.0"
@@ -22,9 +22,10 @@
                 ]
             }
         },
+        "post_delay": 4000,
         "timeout": 35000,
         "next": [
-            "点击进入游戏"
+            "准备进入游戏"
         ],
         "on_error": [
             "检测是不是有更新"
@@ -80,6 +81,7 @@
                 ]
             }
         },
+        "post_delay": 4000,
         "next": [
             "关闭公告栏-进入游戏"
         ],
@@ -119,13 +121,15 @@
         "action": {
             "type": "Click"
         },
+        "repeat": 2,
+        "repeat_delay": 4000,
         "next": [
             "进入游戏结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1840,
-                "y": -26
+                "x": 2146,
+                "y": -228
             }
         }
     },
@@ -162,7 +166,7 @@
             "检测公告栏-进入游戏"
         ],
         "on_error": [
-            "点击进入游戏"
+            "准备进入游戏"
         ],
         "$__mpe_code": {
             "position": {
@@ -175,8 +179,23 @@
         "post_delay": 30000,
         "$__mpe_code": {
             "position": {
-                "x": 2348,
-                "y": 10
+                "x": 2689,
+                "y": 4
+            }
+        }
+    },
+    "准备进入游戏": {
+        "timeout": 15000,
+        "next": [
+            "点击进入游戏"
+        ],
+        "on_error": [
+            "进入游戏结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1698,
+                "y": -17
             }
         }
     }
