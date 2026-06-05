@@ -3,23 +3,38 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780216366492,
+            "lastSyncTime": 1780499641255,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\荣耀之战一次.json",
             "savedViewport": {
-                "x": -3304,
-                "y": -620,
-                "zoom": 0.99
+                "x": -3941,
+                "y": -384,
+                "zoom": 0.63
             },
             "filename": "荣耀之战一次",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "$__mpe_external_返回主界面开始_荣耀之战一次": {
         "$__mpe_code": {
             "position": {
-                "x": 6160,
-                "y": 1139
+                "x": 6632,
+                "y": 1272
+            }
+        }
+    },
+    "已经进入荣耀之战界面": {
+        "post_delay": 4000,
+        "next": [
+            "是不是有休整中字样",
+            "看看是不是挑战次数为0",
+            "选择第一个战斗-荣耀之战",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3470,
+                "y": 882
             }
         }
     },
@@ -58,7 +73,7 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5397,
+                "x": 5434,
                 "y": 809
             }
         }
@@ -105,11 +120,10 @@
         }
     },
     "开始自动战斗检查-荣耀之战": {
+        "post_delay": 5000,
         "timeout": 5000,
         "next": [
-            "自动战斗检查-荣耀之战"
-        ],
-        "on_error": [
+            "自动战斗检查-荣耀之战",
             "开始检测战斗是否结束-荣耀之战"
         ],
         "$__mpe_code": {
@@ -139,12 +153,40 @@
         },
         "post_delay": 3000,
         "next": [
-            "进入荣耀之战"
+            "进入荣耀之战界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3432,
-                "y": 777
+                "x": 2923,
+                "y": 677
+            }
+        }
+    },
+    "开始领取任务奖励-竞技场": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    971,
+                    636,
+                    162,
+                    40
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7702,
+                "y": 744
             }
         }
     },
@@ -164,12 +206,195 @@
             }
         },
         "next": [
+            "确认竞技场挑战奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6041,
+                "y": 805
+            }
+        }
+    },
+    "是不是有休整中字样": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    62,
+                    599,
+                    301,
+                    97
+                ],
+                "expected": [
+                    "休整中"
+                ]
+            }
+        },
+        "next": [
+            "正在休整-挑战任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3940,
+                "y": 461
+            }
+        }
+    },
+    "有没有在竞技场界面呢": {
+        "post_delay": 5000,
+        "next": [
+            "检测是否在竞技场界面",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6058,
-                "y": 802
+                "x": 6280,
+                "y": 637
+            }
+        }
+    },
+    "查看有没有待领取奖励-竞技场": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    860,
+                    594,
+                    116,
+                    123
+                ],
+                "template": [
+                    "待领取奖励图标.png"
+                ],
+                "threshold": [
+                    0.4
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -52,
+                    31,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "next": [
+            "开始领取任务奖励-竞技场"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7407,
+                "y": 623
+            }
+        }
+    },
+    "检测是否在竞技场界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    230,
+                    8,
+                    189,
+                    57
+                ],
+                "expected": [
+                    "荣耀"
+                ]
+            }
+        },
+        "next": [
+            "看看有没有待领取奖励-竞技场"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6686,
+                "y": 697
+            }
+        }
+    },
+    "正在休整-挑战任务结束": {
+        "next": [
+            "有没有在竞技场界面呢"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5045,
+                "y": 403
+            }
+        }
+    },
+    "看看是不是挑战次数为0": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    900,
+                    10,
+                    175,
+                    53
+                ],
+                "expected": [
+                    "0"
+                ]
+            }
+        },
+        "next": [
+            "有没有在竞技场界面呢"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4191,
+                "y": 572
+            }
+        }
+    },
+    "看看有没有待领取奖励-竞技场": {
+        "post_delay": 5000,
+        "next": [
+            "查看有没有待领取奖励-竞技场",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7049,
+                "y": 739
+            }
+        }
+    },
+    "确认竞技场挑战奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1169,
+                    588,
+                    92,
+                    108
+                ],
+                "template": [
+                    "签到奖励领取按键.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "有没有在竞技场界面呢"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6296,
+                "y": 859
             }
         }
     },
@@ -208,12 +433,12 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3115,
-                "y": 773
+                "x": 2559,
+                "y": 585
             }
         }
     },
-    "进入荣耀之战": {
+    "进入荣耀之战界面": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -242,15 +467,12 @@
         "post_delay": 15000,
         "timeout": 4000,
         "next": [
-            "选择第一个战斗-荣耀之战"
-        ],
-        "on_error": [
-            "返回主界面开始"
+            "已经进入荣耀之战界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3787,
-                "y": 793
+                "x": 3212,
+                "y": 721
             }
         }
     },
@@ -278,8 +500,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4168,
-                "y": 653
+                "x": 4032,
+                "y": 702
             }
         }
     }

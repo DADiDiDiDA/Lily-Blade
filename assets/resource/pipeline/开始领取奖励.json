@@ -3,30 +3,22 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1780492416826,
+            "isModifiedExternally": false,
+            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\开始领取奖励.json",
             "savedViewport": {
-                "x": -4884,
-                "y": -191,
+                "x": -4704,
+                "y": -193,
                 "zoom": 0.75
             },
             "filename": "开始领取奖励",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "$__mpe_external_返回主界面开始_开始领取奖励": {
         "$__mpe_code": {
             "position": {
                 "x": 8086,
-                "y": 543
-            }
-        }
-    },
-    "开始领取奖励": {
-        "next": [
-            "寻找菜单界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6786,
                 "y": 543
             }
         }
@@ -55,6 +47,17 @@
         "$__mpe_code": {
             "position": {
                 "x": 7046,
+                "y": 543
+            }
+        }
+    },
+    "开始领取奖励": {
+        "next": [
+            "寻找菜单界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6786,
                 "y": 543
             }
         }

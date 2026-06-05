@@ -3,16 +3,16 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780190504597,
+            "lastSyncTime": 1780492422130,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": -2354,
-                "y": -87,
-                "zoom": 1.49
+                "x": -363,
+                "y": 377,
+                "zoom": 0.53
             },
             "filename": "返回主界面",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "左上角叉号": {
@@ -35,8 +35,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2036,
-                "y": 667
+                "x": 1911,
+                "y": -204
             }
         }
     },
@@ -60,25 +60,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2027,
-                "y": 428
-            }
-        }
-    },
-    "按键尝试返回主界面": {
-        "action": {
-            "type": "ClickKey",
-            "param": {
-                "key": [
-                    4,
-                    111
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 2042,
-                "y": 1102
+                "x": 1927,
+                "y": -583
             }
         }
     },
@@ -102,8 +85,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1968,
-                "y": -119
+                "x": 1929,
+                "y": 139
             }
         }
     },
@@ -117,15 +100,12 @@
     },
     "返回主界面开始": {
         "post_delay": 3000,
-        "timeout": 4000,
+        "timeout": -1,
         "next": [
-            "检测主界面"
-        ],
-        "on_error": [
             "[JumpBack]领取签到奖励",
             "[JumpBack]开始关闭签到界面",
             "[JumpBack]左上角叉号",
-            "按键尝试返回主界面"
+            "检测主界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -158,8 +138,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 1979,
-                "y": 110
+                "x": 1931,
+                "y": -915
             }
         }
     }

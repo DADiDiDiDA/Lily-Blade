@@ -3,23 +3,23 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780191704107,
+            "lastSyncTime": 1780492813449,
             "isModifiedExternally": false,
             "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\丰饶之角奖励领取.json",
             "savedViewport": {
-                "x": -1278,
-                "y": -367,
-                "zoom": 0.75
+                "x": -1765,
+                "y": -13,
+                "zoom": 0.65
             },
             "filename": "丰饶之角奖励领取",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
         }
     },
     "$__mpe_external_返回主界面开始_丰饶之角奖励领取": {
         "$__mpe_code": {
             "position": {
-                "x": 4189,
-                "y": 1259
+                "x": 3884,
+                "y": 1277
             }
         }
     },
@@ -98,8 +98,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3789,
-                "y": 811
+                "x": 3645,
+                "y": 792
             }
         }
     },
@@ -109,8 +109,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2430,
-                "y": 671
+                "x": 2226,
+                "y": 581
             }
         }
     },
@@ -171,12 +171,12 @@
         }
     },
     "开始尝试任务奖励领取-丰饶之角": {
+        "post_delay": 4000,
         "timeout": 8000,
         "next": [
-            "尝试任务领取-丰饶之角"
-        ],
-        "on_error": [
-            "开始尝试奖励领取-丰饶之角"
+            "尝试任务领取-丰饶之角",
+            "尝试奖励领取-丰饶之角",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -185,33 +185,17 @@
             }
         }
     },
-    "开始尝试奖励领取-丰饶之角": {
-        "timeout": 7000,
-        "next": [
-            "尝试奖励领取-丰饶之角"
-        ],
-        "on_error": [
-            "返回主界面开始"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3413,
-                "y": 902
-            }
-        }
-    },
     "开始确认领取奖励-丰饶": {
+        "post_delay": 4000,
         "timeout": 7000,
         "next": [
-            "领取签到奖励-丰饶"
-        ],
-        "on_error": [
+            "领取签到奖励-丰饶",
             "开始尝试任务奖励领取-丰饶之角"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3955,
-                "y": 414
+                "x": 3699,
+                "y": 171
             }
         }
     },
@@ -258,8 +242,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2836,
-                "y": 687
+                "x": 2591,
+                "y": 613
             }
         }
     },
@@ -290,8 +274,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4232,
-                "y": 182
+                "x": 4105,
+                "y": -7
             }
         }
     }

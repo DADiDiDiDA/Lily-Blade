@@ -3,16 +3,21 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780151179534,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\领取邮件奖励.json",
             "savedViewport": {
-                "x": -1936,
-                "y": 312,
-                "zoom": 0.75
+                "x": -1587,
+                "y": 271,
+                "zoom": 0.76
             },
             "filename": "领取邮件奖励",
-            "version": "v1.5.3"
+            "version": "v1.6.0"
+        }
+    },
+    "$__mpe_external_返回主界面开始_领取邮件奖励": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3668,
+                "y": -21
+            }
         }
     },
     "开始全部领取-邮件": {
@@ -38,8 +43,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3356,
-                "y": -62
+                "x": 3330,
+                "y": -186
             }
         }
     },
@@ -66,27 +71,21 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2980,
-                "y": -53
+                "x": 2928,
+                "y": -249
             }
         }
     },
     "领取邮件奖励开始": {
+        "post_delay": 3000,
         "next": [
-            "点击邮件"
+            "点击邮件",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2720,
-                "y": -53
-            }
-        }
-    },
-    "$__mpe_external_返回主界面开始_领取邮件奖励": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3668,
-                "y": -21
+                "x": 2588,
+                "y": -93
             }
         }
     }
