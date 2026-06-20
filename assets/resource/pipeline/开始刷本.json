@@ -3,16 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780492976909,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\开始刷本.json",
             "savedViewport": {
-                "x": -1936,
-                "y": 178,
-                "zoom": 0.35
+                "x": -3198,
+                "y": -701,
+                "zoom": 0.66
             },
             "filename": "开始刷本",
-            "version": "v1.6.0"
+            "version": "v1.6.1"
         }
     },
     "$__mpe_external_返回主界面开始_开始刷本": {
@@ -383,8 +380,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7465,
-                "y": -387
+                "x": 7433,
+                "y": -651
             }
         }
     },
@@ -413,7 +410,7 @@
             }
         }
     },
-    "开始战斗": {
+    "开始战斗-刷体力": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -433,7 +430,7 @@
         },
         "post_delay": 6000,
         "next": [
-            "开始调整战斗方式"
+            "开始调整战斗方式-刷体力"
         ],
         "$__mpe_code": {
             "position": {
@@ -462,7 +459,7 @@
         },
         "post_delay": 7000,
         "next": [
-            "开始战斗"
+            "开始战斗-刷体力"
         ],
         "$__mpe_code": {
             "position": {
@@ -513,14 +510,15 @@
             }
         }
     },
-    "开始调整战斗方式": {
+    "开始调整战斗方式-刷体力": {
         "next": [
-            "看看是不是自动战斗"
+            "看看是不是自动战斗",
+            "[JumpBack]调整战斗方式为自动-刷体力"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 5429,
-                "y": 1347
+                "y": 1489
             }
         }
     },
@@ -801,20 +799,17 @@
                     70
                 ],
                 "expected": [
-                    "手动"
+                    "自动"
                 ]
             }
-        },
-        "action": {
-            "type": "Click"
         },
         "next": [
             "开始检测战斗结果-记忆寻回"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5763,
-                "y": 1263
+                "x": 5734,
+                "y": 1292
             }
         }
     },
@@ -844,8 +839,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7845,
-                "y": -457
+                "x": 7797,
+                "y": -553
             }
         }
     },
@@ -1048,8 +1043,33 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8280,
-                "y": -407
+                "x": 8536,
+                "y": -292
+            }
+        }
+    },
+    "调整战斗方式为自动-刷体力": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    78,
+                    12,
+                    375,
+                    70
+                ],
+                "expected": [
+                    "手动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 5894,
+                "y": 1706
             }
         }
     }
