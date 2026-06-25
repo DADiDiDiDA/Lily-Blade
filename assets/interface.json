@@ -4,7 +4,7 @@
     "description": "Lily Blade自动化",
     "contact": "",
     "license": "MIT",
-    "welcome": "111",
+    "welcome": "铃兰之剑自动化",
     "version": "1.2.0",
     
     "controller": [
@@ -28,7 +28,7 @@
         {
             "name": "🎮 登录游戏",
             "entry": "开始进入游戏",
-            "description": "在游戏加载完成后，自动进入游戏"
+            "description": "在游戏加载完成后，自动进入游戏(不可以在游戏内启动欧)"
         },
         {
             "name": "❌ 关闭活动界面",
