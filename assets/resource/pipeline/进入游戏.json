@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": 116,
-                "y": 429,
-                "zoom": 0.66
+                "x": -171,
+                "y": 390,
+                "zoom": 0.54
             },
             "filename": "进入游戏",
-            "version": "v1.6.1"
+            "version": "v1.7.3"
         }
     },
     "关闭公告栏-进入游戏": {
@@ -30,36 +30,80 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1189,
-                "y": -600
+                "x": 1059,
+                "y": -826
             }
         }
     },
-    "启动铃兰之剑": {
+    "尝试解决未知错误": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    610,
+                    471,
+                    59,
+                    37
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1083,
+                "y": -351
+            }
+        }
+    },
+    "开始进入游戏": {
         "action": {
             "type": "StartApp",
             "param": {
-                "package": "com.xd.ssrpg"
+                "package": "com.xd.ssrpg/com.jixin.AlternateIcon1"
             }
         },
+        "next": [
+            "开始进入游戏启动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -538,
+                "y": -256
+            }
+        }
+    },
+    "开始进入游戏启动": {
         "next": [
             "等待游戏加载-进入游戏"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -179,
-                "y": -301
+                "x": -104,
+                "y": -125
             }
         }
     },
-    "开始进入游戏": {
-        "next": [
-            "启动铃兰之剑"
-        ],
+    "是不是有服务器维护提示": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "服务器维护中"
+                ]
+            }
+        },
+        "action": {
+            "type": "StopTask"
+        },
         "$__mpe_code": {
             "position": {
-                "x": -608,
-                "y": 4
+                "x": 1059,
+                "y": -118
             }
         }
     },
@@ -84,8 +128,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 822,
-                "y": -564
+                "x": 764,
+                "y": -839
             }
         }
     },
@@ -114,8 +158,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1864,
-                "y": -217
+                "x": 1660,
+                "y": -638
             }
         }
     },
@@ -138,12 +182,12 @@
             "type": "Click"
         },
         "next": [
-            "开始进入游戏"
+            "开始进入游戏启动"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1854,
-                "y": 132
+                "x": 1472,
+                "y": 81
             }
         }
     },
@@ -167,50 +211,6 @@
             "position": {
                 "x": 2689,
                 "y": 4
-            }
-        }
-    },
-    "是不是有服务器维护提示": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "服务器维护中"
-                ]
-            }
-        },
-        "action": {
-            "type": "StopTask"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 993,
-                "y": -8
-            }
-        }
-    },
-    "尝试解决未知错误": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    610,
-                    471,
-                    59,
-                    37
-                ],
-                "expected": [
-                    "确定"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 951,
-                "y": -217
             }
         }
     }
