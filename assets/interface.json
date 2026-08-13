@@ -28,43 +28,51 @@
         {
             "name": "🎮 登录游戏",
             "entry": "开始进入游戏",
+            "default_check": true,
             "description": "在游戏加载完成后，自动进入游戏(不可以在游戏内启动欧)"
         },
         {
             "name": "❌ 关闭活动界面",
             "entry": "返回主界面开始",
+            "default_check": true,
             "description": "关闭签到等活动弹窗"
         },
         {
             "name": "📧 领取邮件奖励",
             "entry": "领取邮件奖励开始",
+            "default_check": true,
             "description": "领取邮箱内所有奖励"
         },
         {
             "name": "⚔️ 刷体力第一次",
             "entry": "开始刷本启动",
+            "default_check": true,
             "description": "可自定义选择要刷取的副本(推荐记忆寻回）",
             "option": ["刷本关卡选择"]
         },
         {
             "name": "⚔️ 刷体力第二次",
             "entry": "开始刷本启动",
+            "default_check": true,
             "description": "可自定义选择要刷取的副本",
             "option": ["刷本关卡选择"]
         },
         {
             "name": "⚔️ 荣耀之战一次",
             "entry": "荣耀之战一次开始",
+            "default_check": true,
             "description": "自动完成一次荣耀之战"
         },
         {
             "name": "📋 领取每日任务奖励",
             "entry": "开始领取奖励",
+            "default_check": true,
             "description": "领取每日任务的全部奖励"
         },
         {
             "name": "🌾 丰饶之角奖励领取",
             "entry": "开始丰饶之角奖励领取",
+            "default_check": true,
             "description": "领取丰饶之角内的签到和任务奖励"
         }
     ],
