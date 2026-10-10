@@ -4,19 +4,19 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -1587,
-                "y": 271,
-                "zoom": 0.76
+                "x": -3037,
+                "y": 579,
+                "zoom": 1.19
             },
             "filename": "领取邮件奖励",
-            "version": "v1.6.0"
+            "version": "v2.0.7"
         }
     },
     "$__mpe_external_返回主界面开始_领取邮件奖励": {
         "$__mpe_code": {
             "position": {
-                "x": 3668,
-                "y": -21
+                "x": 3928,
+                "y": 175
             }
         }
     },
@@ -43,8 +43,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3330,
-                "y": -186
+                "x": 3534,
+                "y": -187
             }
         }
     },
@@ -67,7 +67,8 @@
             "type": "Click"
         },
         "next": [
-            "开始全部领取-邮件"
+            "是否位于邮件界面",
+            "[JumpBack]点击邮件_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -86,6 +87,56 @@
             "position": {
                 "x": 2588,
                 "y": -93
+            }
+        }
+    },
+    "是否位于邮件界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    219,
+                    7,
+                    102,
+                    58
+                ],
+                "expected": [
+                    "邮件"
+                ]
+            }
+        },
+        "next": [
+            "开始全部领取-邮件"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3188,
+                "y": -249
+            }
+        }
+    },
+    "点击邮件_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    127,
+                    72,
+                    369,
+                    91
+                ],
+                "template": [
+                    "邮件图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3225,
+                "y": -479
             }
         }
     }
