@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -2227,
-                "y": -195,
-                "zoom": 0.76
+                "x": -1447,
+                "y": -51,
+                "zoom": 0.57
             },
             "filename": "丰饶之角奖励领取",
-            "version": "v2.0.7"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_丰饶之角奖励领取": {
@@ -50,6 +50,7 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "开始全部领取"
         ],
@@ -90,13 +91,14 @@
                 ]
             }
         },
+        "post_delay": 2000,
         "next": [
             "开始全部领取奖励-丰饶之角"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3645,
-                "y": 792
+                "x": 3673,
+                "y": 725
             }
         }
     },
@@ -129,9 +131,7 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "开始确认领取奖励-丰饶"
-        ],
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 3712,
@@ -157,9 +157,7 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "返回主界面开始"
-        ],
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 4161,
@@ -171,39 +169,15 @@
         "post_delay": 4000,
         "timeout": 8000,
         "next": [
-            "尝试任务领取-丰饶之角",
-            "尝试奖励领取-丰饶之角",
+            "[JumpBack]领取签到奖励-丰饶",
+            "[JumpBack]尝试任务领取-丰饶之角",
+            "[JumpBack]尝试奖励领取-丰饶之角",
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 2979,
                 "y": 628
-            }
-        }
-    },
-    "开始确认领取奖励-丰饶": {
-        "post_delay": 4000,
-        "timeout": 7000,
-        "next": [
-            "领取签到奖励-丰饶",
-            "开始尝试任务奖励领取-丰饶之角"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3541,
-                "y": 71
-            }
-        }
-    },
-    "结束领取签到奖励-丰饶": {
-        "next": [
-            "开始确认领取奖励-丰饶"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4529,
-                "y": 375
             }
         }
     },
@@ -266,13 +240,11 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "结束领取签到奖励-丰饶"
-        ],
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4105,
-                "y": -7
+                "x": 3473,
+                "y": 146
             }
         }
     }

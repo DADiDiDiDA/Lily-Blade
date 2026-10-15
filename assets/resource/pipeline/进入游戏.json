@@ -53,6 +53,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 1083,
@@ -67,6 +68,7 @@
                 "package": "com.xd.ssrpg/com.jixin.AlternateIcon1"
             }
         },
+        "post_delay": 2000,
         "next": [
             "开始进入游戏启动"
         ],
@@ -151,6 +153,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "repeat": 2,
         "repeat_delay": 4000,
         "next": [
@@ -181,6 +184,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "开始进入游戏启动"
         ],

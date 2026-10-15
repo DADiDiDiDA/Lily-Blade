@@ -4,12 +4,12 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3037,
-                "y": 579,
-                "zoom": 1.19
+                "x": -1407,
+                "y": 301,
+                "zoom": 0.57
             },
             "filename": "领取邮件奖励",
-            "version": "v2.0.7"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_领取邮件奖励": {
@@ -38,13 +38,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3534,
-                "y": -187
+                "x": 3719,
+                "y": -316
             }
         }
     },
@@ -66,6 +67,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "是否位于邮件界面",
             "[JumpBack]点击邮件_第二次"
@@ -106,7 +108,8 @@
             }
         },
         "next": [
-            "开始全部领取-邮件"
+            "开始全部领取-邮件",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -133,6 +136,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 3225,

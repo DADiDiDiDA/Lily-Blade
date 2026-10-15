@@ -3,23 +3,20 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780492416826,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\开始领取奖励.json",
             "savedViewport": {
-                "x": -4704,
-                "y": -193,
-                "zoom": 0.75
+                "x": -4260,
+                "y": -92,
+                "zoom": 0.65
             },
             "filename": "开始领取奖励",
-            "version": "v1.6.0"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_开始领取奖励": {
         "$__mpe_code": {
             "position": {
-                "x": 8086,
-                "y": 543
+                "x": 8782,
+                "y": 661
             }
         }
     },
@@ -41,13 +38,15 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "选择每日任务"
+            "选择每日任务",
+            "[JumpBack]寻找菜单界面_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7046,
-                "y": 543
+                "x": 6918,
+                "y": 538
             }
         }
     },
@@ -57,7 +56,7 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6786,
+                "x": 6482,
                 "y": 543
             }
         }
@@ -80,8 +79,10 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "选择每日奖励"
+            "选择每日奖励",
+            "[JumpBack]选择每日任务_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -108,13 +109,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "领取每日任务奖励"
+            "领取每日任务奖励",
+            "[JumpBack]选择每日奖励_第二次",
+            "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7566,
-                "y": 543
+                "x": 7775,
+                "y": 520
             }
         }
     },
@@ -136,13 +140,93 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7826,
-                "y": 543
+                "x": 8414,
+                "y": 436
+            }
+        }
+    },
+    "寻找菜单界面_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    4,
+                    4,
+                    479,
+                    94
+                ],
+                "template": [
+                    "关卡内选择菜单.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 7221,
+                "y": 310
+            }
+        }
+    },
+    "选择每日任务_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    813,
+                    151,
+                    392,
+                    430
+                ],
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 7571,
+                "y": 254
+            }
+        }
+    },
+    "选择每日奖励_第二次": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    36,
+                    81,
+                    196,
+                    251
+                ],
+                "expected": [
+                    "每日"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 8164,
+                "y": 233
             }
         }
     }

@@ -3,23 +3,20 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1780499641255,
-            "isModifiedExternally": false,
-            "filePath": "D:\\Application\\Automate\\Lily-Blade\\assets\\resource\\pipeline\\荣耀之战一次.json",
             "savedViewport": {
-                "x": -3941,
-                "y": -384,
-                "zoom": 0.63
+                "x": -3850,
+                "y": -247,
+                "zoom": 0.57
             },
             "filename": "荣耀之战一次",
-            "version": "v1.6.0"
+            "version": "v2.1.0"
         }
     },
     "$__mpe_external_返回主界面开始_荣耀之战一次": {
         "$__mpe_code": {
             "position": {
-                "x": 6632,
-                "y": 1272
+                "x": 6959,
+                "y": 1535
             }
         }
     },
@@ -33,8 +30,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3470,
-                "y": 882
+                "x": 3438,
+                "y": 901
             }
         }
     },
@@ -58,35 +55,26 @@
         },
         "post_delay": 8000,
         "next": [
-            "开始自动战斗-荣耀之战"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4446,
-                "y": 716
-            }
-        }
-    },
-    "开始检测战斗是否结束-荣耀之战": {
-        "next": [
+            "[JumpBack]开始战斗-荣耀之战_第二次",
             "开始等待挑战完成-荣耀之战"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5434,
-                "y": 809
+                "x": 4342,
+                "y": 687
             }
         }
     },
     "开始等待挑战完成-荣耀之战": {
         "timeout": -1,
         "next": [
-            "挑战完成-荣耀之战"
+            "挑战完成-荣耀之战",
+            "[JumpBack]开始自动战斗-荣耀之战"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5704,
-                "y": 802
+                "x": 4962,
+                "y": 722
             }
         }
     },
@@ -105,31 +93,15 @@
                 ]
             }
         },
-        "pre_delay": 2000,
+        "pre_delay": 4000,
         "action": {
             "type": "Click"
         },
-        "next": [
-            "开始自动战斗检查-荣耀之战"
-        ],
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4743,
-                "y": 711
-            }
-        }
-    },
-    "开始自动战斗检查-荣耀之战": {
-        "post_delay": 5000,
-        "timeout": 5000,
-        "next": [
-            "自动战斗检查-荣耀之战",
-            "开始检测战斗是否结束-荣耀之战"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5003,
-                "y": 711
+                "x": 5492,
+                "y": 964
             }
         }
     },
@@ -157,8 +129,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2923,
-                "y": 677
+                "x": 2639,
+                "y": 619
             }
         }
     },
@@ -180,13 +152,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7702,
-                "y": 744
+                "x": 8297,
+                "y": 916
             }
         }
     },
@@ -210,8 +183,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6041,
-                "y": 805
+                "x": 6015,
+                "y": 866
             }
         }
     },
@@ -235,8 +208,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3940,
-                "y": 461
+                "x": 3935,
+                "y": 131
             }
         }
     },
@@ -248,8 +221,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6280,
-                "y": 637
+                "x": 6713,
+                "y": 728
             }
         }
     },
@@ -284,12 +257,13 @@
         },
         "post_delay": 3000,
         "next": [
-            "开始领取任务奖励-竞技场"
+            "开始领取任务奖励-竞技场",
+            "[JumpBack]查看有没有待领取奖励-竞技场_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7407,
-                "y": 623
+                "x": 7884,
+                "y": 749
             }
         }
     },
@@ -313,8 +287,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6686,
-                "y": 697
+                "x": 7151,
+                "y": 748
             }
         }
     },
@@ -324,8 +298,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5045,
-                "y": 403
+                "x": 5124,
+                "y": 229
             }
         }
     },
@@ -349,8 +323,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4191,
-                "y": 572
+                "x": 3980,
+                "y": 404
             }
         }
     },
@@ -362,8 +336,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7049,
-                "y": 739
+                "x": 7537,
+                "y": 814
             }
         }
     },
@@ -388,41 +362,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "有没有在竞技场界面呢"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6296,
-                "y": 859
-            }
-        }
-    },
-    "自动战斗检查-荣耀之战": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    0,
-                    5,
-                    343,
-                    70
-                ],
-                "expected": [
-                    "手动"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "开始检测战斗是否结束-荣耀之战"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5283,
-                "y": 531
+                "x": 6370,
+                "y": 897
             }
         }
     },
@@ -433,8 +380,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2559,
-                "y": 585
+                "x": 2238,
+                "y": 508
             }
         }
     },
@@ -471,8 +418,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3212,
-                "y": 721
+                "x": 3019,
+                "y": 696
             }
         }
     },
@@ -496,12 +443,102 @@
         },
         "post_delay": 8000,
         "next": [
-            "开始战斗-荣耀之战"
+            "开始战斗-荣耀之战",
+            "[JumpBack]选择第一个战斗-荣耀之战_第二次"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4032,
-                "y": 702
+                "x": 3983,
+                "y": 697
+            }
+        }
+    },
+    "选择第一个战斗-荣耀之战_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    496,
+                    444,
+                    120,
+                    120
+                ],
+                "template": [
+                    "荣耀之战战斗.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 8000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4287,
+                "y": 1008
+            }
+        }
+    },
+    "开始战斗-荣耀之战_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1128,
+                    502,
+                    121,
+                    128
+                ],
+                "expected": [
+                    "开始"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 8000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4652,
+                "y": 1025
+            }
+        }
+    },
+    "查看有没有待领取奖励-竞技场_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    860,
+                    594,
+                    116,
+                    123
+                ],
+                "template": [
+                    "待领取奖励图标.png"
+                ],
+                "threshold": [
+                    0.4
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -52,
+                    31,
+                    0,
+                    0
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "$__mpe_code": {
+            "position": {
+                "x": 8295,
+                "y": 571
             }
         }
     }
