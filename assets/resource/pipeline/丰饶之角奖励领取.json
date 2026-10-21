@@ -52,7 +52,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "开始全部领取"
+            "开始全部领取",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {
@@ -93,7 +94,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "开始全部领取奖励-丰饶之角"
+            "开始全部领取奖励-丰饶之角",
+            "[JumpBack]返回主界面开始"
         ],
         "$__mpe_code": {
             "position": {

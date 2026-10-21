@@ -41,7 +41,7 @@
         "post_delay": 2000,
         "next": [
             "选择每日任务",
-            "[JumpBack]寻找菜单界面_第二次"
+            "[JumpBack]寻找菜单界面-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -82,7 +82,7 @@
         "post_delay": 2000,
         "next": [
             "选择每日奖励",
-            "[JumpBack]选择每日任务_第二次"
+            "[JumpBack]选择每日任务-第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -112,7 +112,7 @@
         "post_delay": 2000,
         "next": [
             "领取每日任务奖励",
-            "[JumpBack]选择每日奖励_第二次",
+            "[JumpBack]选择每日奖励-第二次",
             "返回主界面开始"
         ],
         "$__mpe_code": {
@@ -151,7 +151,7 @@
             }
         }
     },
-    "寻找菜单界面_第二次": {
+    "寻找菜单界面-第二次": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -177,7 +177,7 @@
             }
         }
     },
-    "选择每日任务_第二次": {
+    "选择每日任务-第二次": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -203,7 +203,7 @@
             }
         }
     },
-    "选择每日奖励_第二次": {
+    "选择每日奖励-第二次": {
         "max_hit": 2,
         "recognition": {
             "type": "OCR",
