@@ -2,11 +2,10 @@
     "interface_version": 2,
     "name": "Lily-Blade",
     "description": "铃兰之剑自动化",
-    "contact": "",
     "license": "MIT",
     "welcome": "铃兰之剑自动化",
     "version": "1.2.5",
-    
+
     "controller": [
         {
             "name": "安卓端",
@@ -14,16 +13,14 @@
             "display_short_side": 720
         }
     ],
-    
+
     "resource": [
         {
             "name": "官服",
-            "path": [
-                "./resource"
-            ]
+            "path": ["./resource"]
         }
     ],
-    
+
     "task": [
         {
             "name": "🎮 登录游戏",
@@ -41,15 +38,22 @@
             "name": "⚔️ 刷体力第一次",
             "entry": "开始刷本启动",
             "default_check": true,
-            "description": "可自定义选择要刷取的副本(推荐记忆寻回）",
-            "option": ["刷本关卡选择"]
+            "description": "默认记忆巡回，可自定义选择副本",
+            "option": ["刷本关卡选择-第一次"]
         },
         {
             "name": "⚔️ 刷体力第二次",
             "entry": "开始刷本启动",
             "default_check": true,
-            "description": "可自定义选择要刷取的副本",
-            "option": ["刷本关卡选择"]
+            "description": "默认实战训练，可自定义选择副本",
+            "option": ["刷本关卡选择-第二次"]
+        },
+        {
+            "name": "⚔️ 刷体力第三次",
+            "entry": "开始刷本启动",
+            "default_check": true,
+            "description": "默认星辰试炼，可自定义选择副本",
+            "option": ["刷本关卡选择-第三次"]
         },
         {
             "name": "⚔️ 荣耀之战一次",
@@ -70,65 +74,66 @@
             "description": "领取丰饶之角奖励"
         }
     ],
-    
+
     "option": {
-        "刷本关卡选择": {
+        "刷本关卡选择-第一次": {
             "type": "select",
-            "label": "刷本关卡选择",
-            "description": "选择要自动刷取的副本",
-            "default_case": "记忆寻回",
+            "label": "刷本关卡选择（第一次）",
+            "description": "选择第一次刷体力要自动刷取的副本",
+            "default_case": "记忆巡回",
             "cases": [
+                { "name": "记忆巡回", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷记忆寻回开始"] } } },
+                { "name": "实战训练", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷实战训练开始"] } } },
+                { "name": "星辰试炼", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷星辰试炼开始"] } } },
+                { "name": "光辉锻铸", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷光辉锻铸开始"] } } },
+                { "name": "进阶试炼", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷进阶试炼开始"] } } }
+            ]
+        },
+        "刷本关卡选择-第二次": {
+            "type": "select",
+            "label": "刷本关卡选择（第二次）",
+            "description": "选择第二次刷体力要自动刷取的副本",
+            "default_case": "实战训练",
+            "cases": [
+                { "name": "实战训练", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷实战训练开始"] } } },
+                { "name": "记忆巡回", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷记忆寻回开始"] } } },
+                { "name": "星辰试炼", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷星辰试炼开始"] } } },
+                { "name": "光辉锻铸", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷光辉锻铸开始"] } } },
+                { "name": "进阶试炼", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷进阶试炼开始"] } } }
+            ]
+        },
+        "刷本关卡选择-第三次": {
+            "type": "select",
+            "label": "刷本关卡选择（第三次）",
+            "description": "选择第三次刷体力要自动刷取的副本",
+            "default_case": "星辰试炼",
+            "cases": [
+                { "name": "星辰试炼", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷星辰试炼开始"] } } },
+                { "name": "记忆巡回", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷记忆寻回开始"] } } },
+                { "name": "实战训练", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷实战训练开始"] } } },
+                { "name": "光辉锻铸", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷光辉锻铸开始"] } } },
+                { "name": "进阶试炼", "pipeline_override": { "开始选择要刷哪个关卡呢": { "next": ["刷进阶试炼开始"] } } }
+            ]
+        }
+    },
+
+    "preset": [
+        {
+            "name": "默认刷体力配置",
+            "task": [
                 {
-                    "name": "实战训练",
-                    "label": "实战训练",
-                    "description": "刷实战训练关卡",
-                    "pipeline_override": {
-                        "开始选择要刷哪个关卡呢": {
-                            "next": ["刷实战训练开始"]
-                        }
-                    }
+                    "name": "⚔️ 刷体力第一次",
+                    "option": { "刷本关卡选择-第一次": "记忆巡回" }
                 },
                 {
-                    "name": "星辰试炼",
-                    "label": "星辰试炼",
-                    "description": "刷星辰试炼关卡",
-                    "pipeline_override": {
-                        "开始选择要刷哪个关卡呢": {
-                            "next": ["刷星辰试炼开始"]
-                        }
-                    }
+                    "name": "⚔️ 刷体力第二次",
+                    "option": { "刷本关卡选择-第二次": "实战训练" }
                 },
                 {
-                    "name": "光辉锻铸",
-                    "label": "光辉锻铸",
-                    "description": "刷光辉锻铸关卡",
-                    "pipeline_override": {
-                        "开始选择要刷哪个关卡呢": {
-                            "next": ["刷光辉锻铸开始"]
-                        }
-                    }
-                },
-                {
-                    "name": "记忆寻回",
-                    "label": "记忆寻回",
-                    "description": "刷记忆寻回副本",
-                    "pipeline_override": {
-                        "开始选择要刷哪个关卡呢": {
-                            "next": ["刷记忆寻回开始"]
-                        }
-                    }
-                },
-                {
-                    "name": "进阶试炼",
-                    "label": "进阶试炼",
-                    "description": "刷进阶试炼关卡",
-                    "pipeline_override": {
-                        "开始选择要刷哪个关卡呢": {
-                            "next": ["刷进阶试炼开始"]
-                        }
-                    }
+                    "name": "⚔️ 刷体力第三次",
+                    "option": { "刷本关卡选择-第三次": "星辰试炼" }
                 }
             ]
         }
-    }
+    ]
 }

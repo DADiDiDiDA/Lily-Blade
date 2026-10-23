@@ -125,8 +125,7 @@
         },
         "post_delay": 3000,
         "next": [
-            "进入荣耀之战界面",
-            "[JumpBack]返回主界面开始"
+            "进入荣耀之战界面"
         ],
         "$__mpe_code": {
             "position": {
