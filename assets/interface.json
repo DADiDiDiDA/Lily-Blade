@@ -4,7 +4,7 @@
     "description": "铃兰之剑自动化",
     "license": "MIT",
     "welcome": "铃兰之剑自动化",
-    "version": "1.2.5",
+    "version": "1.2.6",
 
     "controller": [
         {
