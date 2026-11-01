@@ -35,6 +35,12 @@
             "description": "领取邮箱内所有奖励"
         },
         {
+            "name": "💗 友情点互送",
+            "entry": "友情点互送开始",
+            "default_check": true,
+            "description": "自动领取并赠送友情点"
+        },
+        {
             "name": "⚔️ 刷体力第一次",
             "entry": "开始刷本启动",
             "default_check": true,

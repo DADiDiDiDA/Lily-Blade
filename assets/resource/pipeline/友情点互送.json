@@ -1,0 +1,204 @@
+{
+    "$__mpe_config_友情点互送": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": 595,
+                "y": 200,
+                "zoom": 0.67
+            },
+            "filename": "友情点互送",
+            "version": "v2.1.0"
+        }
+    },
+    "进入好友界面-友情点": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    112,
+                    86,
+                    390,
+                    116
+                ],
+                "template": [
+                    "好友图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "全部领取-友情点",
+            "[JumpBack]进入好友界面-友情点_第二次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -91,
+                "y": 1
+            }
+        }
+    },
+    "全部领取-友情点": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    671,
+                    0,
+                    320,
+                    160
+                ],
+                "expected": [
+                    "全部领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "[JumpBack]全部领取-友情点_第二次",
+            "一键赠送-友情点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 300,
+                "y": 0
+            }
+        }
+    },
+    "一键赠送-友情点": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    920,
+                    0,
+                    320,
+                    160
+                ],
+                "expected": [
+                    "键赠送"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "[JumpBack]一键赠送-友情点_第二次",
+            "返回主界面开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 600,
+                "y": 0
+            }
+        }
+    },
+    "友情点互送开始": {
+        "next": [
+            "进入好友界面-友情点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -411,
+                "y": 29
+            }
+        }
+    },
+    "$__mpe_external_返回主界面开始_友情点互送": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1062,
+                "y": 7
+            }
+        }
+    },
+    "全部领取-友情点_第二次": {
+        "max_hit": 3,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    671,
+                    0,
+                    320,
+                    160
+                ],
+                "expected": [
+                    "全部领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 555,
+                "y": -276
+            }
+        }
+    },
+    "一键赠送-友情点_第二次": {
+        "max_hit": 3,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    920,
+                    0,
+                    320,
+                    160
+                ],
+                "expected": [
+                    "键赠送"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 918,
+                "y": 182
+            }
+        }
+    },
+    "进入好友界面-友情点_第二次": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    112,
+                    86,
+                    390,
+                    116
+                ],
+                "template": [
+                    "好友图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 182,
+                "y": -246
+            }
+        }
+    }
+}
