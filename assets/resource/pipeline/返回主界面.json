@@ -4,9 +4,9 @@
             "prefix": "",
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -641,
-                "y": 211,
-                "zoom": 0.5
+                "x": 1043,
+                "y": 300,
+                "zoom": 0.7
             },
             "filename": "返回主界面",
             "version": "v2.1.0"
@@ -61,11 +61,11 @@
             }
         }
     },
-    "开始进入游戏": {
+    "需要启动游戏": {
         "action": {
             "type": "StartApp",
             "param": {
-                "package": "com.xd.ssrpg/com.jixin.AlternateIcon1"
+                "package": "com.xd.ssrpg"
             }
         },
         "post_delay": 2000,
@@ -74,8 +74,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -538,
-                "y": -256
+                "x": -627,
+                "y": -320
             }
         }
     },
@@ -102,13 +102,13 @@
         "action": {
             "type": "StopTask"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 1059,
                 "y": -118
             }
-        },
-        "post_delay": 2000
+        }
     },
     "检测公告栏-进入游戏": {
         "recognition": {
@@ -350,6 +350,30 @@
             "position": {
                 "x": 3506,
                 "y": -666
+            }
+        }
+    },
+    "开始进入游戏": {
+        "post_delay": 2000,
+        "next": [
+            "需要启动游戏",
+            "不需要启动游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1128,
+                "y": -165
+            }
+        }
+    },
+    "不需要启动游戏": {
+        "next": [
+            "开始进入游戏启动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -657,
+                "y": 34
             }
         }
     }
