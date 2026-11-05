@@ -3,14 +3,10 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793799623484,
-            "isModifiedExternally": false,
-            "isDeleted": false,
-            "filePath": "D:\\Automate\\Git-Maawork\\Lily-Blade\\assets\\resource\\pipeline\\开始刷本.json",
             "savedViewport": {
-                "x": -3928,
-                "y": 880,
-                "zoom": 0.7
+                "x": -3153,
+                "y": 726,
+                "zoom": 0.61
             },
             "filename": "开始刷本",
             "version": "v2.1.0"
@@ -192,7 +188,7 @@
                     "关卡三星通关标志.png"
                 ],
                 "threshold": [
-                    0.5
+                    0.4
                 ],
                 "order_by": "Horizontal",
                 "index": -1
@@ -241,8 +237,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]寻找星辰试炼_第二次",
-            "是否位于星辰试炼界面"
+            "是否位于星辰试炼界面",
+            "[JumpBack]寻找星辰试炼_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -301,8 +297,8 @@
         },
         "post_delay": 2000,
         "next": [
-            "[JumpBack]寻找进阶试炼_第二次",
-            "是否位于进阶试炼界面"
+            "是否位于进阶试炼界面",
+            "[JumpBack]寻找进阶试炼_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -1224,7 +1220,8 @@
         },
         "next": [
             "尝试选择有高额奖励的关卡-星辰试炼",
-            "选择关卡-星辰试炼"
+            "选择关卡-星辰试炼",
+            "是否位于星辰试炼界面_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -1257,8 +1254,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4643,
-                "y": 12
+                "x": 4660,
+                "y": -46
             }
         }
     },
@@ -1389,7 +1386,8 @@
         },
         "next": [
             "尝试选择有高额奖励的关卡-进阶试炼",
-            "正常选择关卡-进阶试炼"
+            "正常选择关卡-进阶试炼",
+            "是否位于进阶试炼界面_第二次"
         ],
         "$__mpe_code": {
             "position": {
@@ -1418,8 +1416,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4819,
-                "y": 1146
+                "x": 4842,
+                "y": 1065
             }
         }
     },
@@ -1463,7 +1461,7 @@
                     "关卡三星通关标志.png"
                 ],
                 "threshold": [
-                    0.5
+                    0.4
                 ],
                 "order_by": "Horizontal",
                 "index": -1
@@ -1485,6 +1483,58 @@
             "position": {
                 "x": 6490,
                 "y": -1265
+            }
+        }
+    },
+    "是否位于进阶试炼界面_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    2,
+                    4,
+                    434,
+                    71
+                ],
+                "expected": [
+                    "进阶"
+                ]
+            }
+        },
+        "next": [
+            "开始寻找有没有三星通关"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5087,
+                "y": 1169
+            }
+        }
+    },
+    "是否位于星辰试炼界面_第二次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    9,
+                    0,
+                    426,
+                    83
+                ],
+                "expected": [
+                    "试炼1",
+                    "试炼2",
+                    "试炼3"
+                ]
+            }
+        },
+        "next": [
+            "开始寻找有没有三星通关"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4952,
+                "y": 120
             }
         }
     }
