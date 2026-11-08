@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1794105620023,
+            "lastSyncTime": 1794108007759,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\Lily-Blade\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": -395,
-                "y": 128,
-                "zoom": 0.3
+                "x": 511,
+                "y": 392,
+                "zoom": 0.25
             },
             "filename": "返回主界面",
             "version": "v2.1.1"
+        }
+    },
+    "$__mpe_anchor_启动游戏一次_返回主界面": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3619,
+                "y": 1152
+            }
         }
     },
     "不需要启动游戏": {
@@ -380,14 +388,6 @@
             "position": {
                 "x": 3506,
                 "y": -666
-            }
-        }
-    },
-    "$__mpe_anchor_启动游戏一次_返回主界面": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3619,
-                "y": 1152
             }
         }
     }
