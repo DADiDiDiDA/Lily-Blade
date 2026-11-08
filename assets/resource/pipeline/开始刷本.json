@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1793929311366,
+            "lastSyncTime": 1794099610440,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\Lily-Blade\\assets\\resource\\pipeline\\开始刷本.json",
             "savedViewport": {
-                "x": -4296,
-                "y": -1061,
-                "zoom": 0.85
+                "x": -3795,
+                "y": -861,
+                "zoom": 0.73
             },
             "filename": "开始刷本",
             "version": "v2.1.1"
@@ -1141,13 +1141,13 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    342,
-                    294,
-                    593,
-                    79
+                    578,
+                    200,
+                    124,
+                    51
                 ],
                 "expected": [
-                    "星级已满"
+                    "提示"
                 ]
             }
         },
