@@ -349,7 +349,9 @@
                 "package": "com.xd.ssrpg"
             }
         },
-        "anchor": "启动游戏一次",
+        "anchor": {
+            "启动游戏一次": "需要启动游戏单引用"
+        },
         "post_delay": 2000,
         "next": [
             "开始进入游戏启动"
@@ -358,6 +360,48 @@
             "position": {
                 "x": -627,
                 "y": -320
+            }
+        }
+    },
+    "需要启动游戏单引用": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.xd.ssrpg"
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "需要启动游戏单引用-限流",
+            "需要启动游戏单引用-清锚点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -377,
+                "y": -86
+            }
+        }
+    },
+    "需要启动游戏单引用-限流": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "max_hit": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": -127,
+                "y": 148
+            }
+        }
+    },
+    "需要启动游戏单引用-清锚点": {
+        "anchor": {
+            "启动游戏一次": ""
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 123,
+                "y": 382
             }
         }
     },
