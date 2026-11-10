@@ -5,7 +5,7 @@
     "description": "铃兰之剑自动化",
     "license": "MIT",
     "welcome": "铃兰之剑自动化",
-    "version": "1.4.4",
+    "version": "1.4.5",
     "controller": [
         {
             "name": "安卓端",
