@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1794108007759,
+            "lastSyncTime": 1795133685825,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\Lily-Blade\\assets\\resource\\pipeline\\返回主界面.json",
             "savedViewport": {
-                "x": 511,
-                "y": 392,
-                "zoom": 0.25
+                "x": 223,
+                "y": 445,
+                "zoom": 0.49
             },
             "filename": "返回主界面",
             "version": "v2.1.1"
@@ -79,8 +79,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 1051,
-                "y": -396
+                "x": 1173,
+                "y": -481
             }
         }
     },
@@ -175,8 +175,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 1049,
-                "y": -143
+                "x": 1063,
+                "y": -218
             }
         }
     },
@@ -294,8 +294,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1472,
-                "y": 81
+                "x": 1455,
+                "y": 313
             }
         }
     },
@@ -305,12 +305,13 @@
             "检测公告栏-进入游戏",
             "点击进入游戏",
             "[JumpBack]尝试解决未知错误",
-            "是不是有服务器维护提示"
+            "是不是有服务器维护提示",
+            "[JumpBack]文件下载失败"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 367,
-                "y": -356
+                "x": 351,
+                "y": -347
             }
         }
     },
@@ -382,18 +383,6 @@
             }
         }
     },
-    "需要启动游戏单引用-限流": {
-        "recognition": {
-            "type": "DirectHit"
-        },
-        "max_hit": 3,
-        "$__mpe_code": {
-            "position": {
-                "x": -127,
-                "y": 148
-            }
-        }
-    },
     "需要启动游戏单引用-清锚点": {
         "anchor": {
             "启动游戏一次": ""
@@ -402,6 +391,15 @@
             "position": {
                 "x": 123,
                 "y": 382
+            }
+        }
+    },
+    "需要启动游戏单引用-限流": {
+        "max_hit": 3,
+        "$__mpe_code": {
+            "position": {
+                "x": -127,
+                "y": 148
             }
         }
     },
@@ -432,6 +430,56 @@
             "position": {
                 "x": 3506,
                 "y": -666
+            }
+        }
+    },
+    "文件下载失败": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    414,
+                    311,
+                    441,
+                    71
+                ],
+                "expected": [
+                    "下载失败"
+                ]
+            }
+        },
+        "next": [
+            "重试文件下载"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 666,
+                "y": -125
+            }
+        }
+    },
+    "重试文件下载": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    751,
+                    438,
+                    106,
+                    57
+                ],
+                "expected": [
+                    "重试"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1027,
+                "y": 70
             }
         }
     }
