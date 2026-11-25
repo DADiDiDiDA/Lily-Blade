@@ -139,6 +139,7 @@
         }
     },
     "寻找光辉锻铸-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -195,6 +196,7 @@
         }
     },
     "寻找实战训练关卡_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -264,6 +266,7 @@
         }
     },
     "寻找当前关卡是不是三星通关关卡-实战训练_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -333,6 +336,7 @@
         }
     },
     "寻找星辰试炼_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -389,6 +393,7 @@
         }
     },
     "寻找记忆寻回_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -445,6 +450,7 @@
         }
     },
     "寻找进阶试炼_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -563,6 +569,7 @@
         }
     },
     "尝试选择有高额奖励的关卡-星辰试炼_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -723,6 +730,7 @@
         }
     },
     "开始战斗-刷体力_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -861,6 +869,7 @@
         }
     },
     "开始选择交错的世界-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -916,6 +925,7 @@
         }
     },
     "开始选择代行任务-实战训练-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1045,6 +1055,7 @@
         }
     },
     "是否位于星辰试炼界面_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1099,6 +1110,7 @@
         }
     },
     "是否位于进阶试炼界面_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1454,6 +1466,7 @@
         }
     },
     "进入刷本界面-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -1509,6 +1522,7 @@
         }
     },
     "选择代行界面_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1565,6 +1579,7 @@
         }
     },
     "选择关卡-星辰试炼_第二次": {
+        "max_hit": 25,
         "post_delay": 2000,
         "recognition": {
             "type": "OCR",

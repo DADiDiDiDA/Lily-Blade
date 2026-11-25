@@ -176,6 +176,7 @@
         }
     },
     "进入好友界面-友情点_第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {

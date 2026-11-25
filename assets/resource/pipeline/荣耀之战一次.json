@@ -453,6 +453,7 @@
         }
     },
     "选择第一个战斗-荣耀之战-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -479,6 +480,7 @@
         }
     },
     "开始战斗-荣耀之战-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -505,6 +507,7 @@
         }
     },
     "查看有没有待领取奖励-竞技场-第二次": {
+        "max_hit": 25,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
