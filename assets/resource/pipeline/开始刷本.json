@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1794099610440,
+            "lastSyncTime": 1795738289331,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "D:\\Automate\\Git-Maawork\\Lily-Blade\\assets\\resource\\pipeline\\开始刷本.json",
             "savedViewport": {
-                "x": -3795,
-                "y": -861,
-                "zoom": 0.73
+                "x": -3806,
+                "y": 413,
+                "zoom": 0.49
             },
             "filename": "开始刷本",
             "version": "v2.1.1"
@@ -160,8 +160,8 @@
         "post_delay": 2000,
         "$__mpe_code": {
             "position": {
-                "x": 4652,
-                "y": 540
+                "x": 4585,
+                "y": 575
             }
         }
     },
@@ -563,8 +563,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4632,
-                "y": -397
+                "x": 4643,
+                "y": -473
             }
         }
     },
@@ -946,8 +946,8 @@
         "post_delay": 3000,
         "$__mpe_code": {
             "position": {
-                "x": 7352,
-                "y": -615
+                "x": 7351,
+                "y": -647
             }
         }
     },
@@ -957,7 +957,8 @@
             "刷星辰试炼开始",
             "刷光辉锻铸开始",
             "刷进阶试炼开始",
-            "刷记忆寻回开始"
+            "刷记忆寻回开始",
+            "刷实战训练开始_副本1"
         ],
         "$__mpe_code": {
             "position": {
@@ -997,8 +998,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4653,
-                "y": 297
+                "x": 4865,
+                "y": 419
             }
         }
     },
@@ -1077,8 +1078,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4952,
-                "y": 120
+                "x": 4542,
+                "y": 205
             }
         }
     },
@@ -1373,7 +1374,6 @@
         }
     },
     "确认角色记忆已满": {
-        "post_delay": 2000,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1391,6 +1391,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 6103,
@@ -1549,7 +1550,6 @@
         }
     },
     "选择关卡-星辰试炼": {
-        "post_delay": 2000,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1567,20 +1567,20 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
             "[JumpBack]选择关卡-星辰试炼_第二次",
             "开始寻找有没有三星通关"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4660,
-                "y": -46
+                "x": 4687,
+                "y": -92
             }
         }
     },
     "选择关卡-星辰试炼_第二次": {
         "max_hit": 25,
-        "post_delay": 2000,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1598,6 +1598,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "$__mpe_code": {
             "position": {
                 "x": 5006,
@@ -1635,6 +1636,165 @@
             "position": {
                 "x": 9049,
                 "y": -382
+            }
+        }
+    },
+    "刷实战训练开始_副本1": {
+        "next": [
+            "寻找神兵试炼关卡",
+            "[JumpBack]关卡类型没找到-往右翻页_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3845,
+                "y": -1301
+            }
+        }
+    },
+    "寻找神兵试炼关卡": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    13,
+                    492,
+                    1267,
+                    172
+                ],
+                "expected": [
+                    "神兵"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "[JumpBack]寻找神兵试炼关卡_第二次",
+            "是否位于神兵试炼界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4239,
+                "y": -1395
+            }
+        }
+    },
+    "寻找神兵试炼关卡_第二次": {
+        "max_hit": 25,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    13,
+                    492,
+                    1267,
+                    172
+                ],
+                "expected": [
+                    "实战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4563,
+                "y": -1605
+            }
+        }
+    },
+    "是否位于神兵试炼界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    9,
+                    0,
+                    426,
+                    83
+                ],
+                "expected": [
+                    "神兵试炼"
+                ]
+            }
+        },
+        "next": [
+            "尝试选择合适的神兵试炼关卡类型"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4676,
+                "y": -1327
+            }
+        }
+    },
+    "关卡类型没找到-往右翻页_副本1": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1088,
+                    651,
+                    1,
+                    1
+                ],
+                "end": [
+                    [
+                        733,
+                        667,
+                        1,
+                        1
+                    ]
+                ]
+            }
+        },
+        "post_delay": 4000,
+        "$__mpe_code": {
+            "position": {
+                "x": 4130,
+                "y": -1699
+            }
+        }
+    },
+    "尝试选择合适的神兵试炼关卡类型": {
+        "next": [
+            "新建节点74",
+            "新建节点75",
+            "新建节点76"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4999,
+                "y": -1330
+            }
+        }
+    },
+    "新建节点74": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5403,
+                "y": -1558
+            }
+        }
+    },
+    "新建节点75": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5392,
+                "y": -1357
+            }
+        }
+    },
+    "新建节点76": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5395,
+                "y": -1086
             }
         }
     }
